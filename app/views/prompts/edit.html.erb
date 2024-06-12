@@ -1,0 +1,19 @@
+<!-- new.html.erb -->
+<h1>編集</h1>
+
+<%= form_with(model: @prompt, local: true) do |form| %>
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :text %>
+    <%= form.text_area :text, class: 'form-control' %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.submit 'Update Prompt', class: 'btn btn-primary' %>
+    <%= link_to 'Back', prompts_path, class: 'btn btn-secondary' %>
+  </div>
+<% end %>

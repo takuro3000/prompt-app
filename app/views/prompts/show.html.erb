@@ -1,0 +1,12 @@
+<!-- show.html.erb -->
+<h1><%= @prompt.title %></h1>
+
+<div class="prompt-content">
+  <p><%= @prompt.text %></p>
+</div>
+
+<div class="action-links">
+  <%= link_to 'Edit', edit_prompt_path(@prompt), class: 'btn btn-edit' %>
+  <%= link_to 'Back', prompts_path, class: 'btn btn-back' %>
+  <%= link_to 'Delete', prompt_path(@prompt), data: { turbo_method: :delete , turbo_confirm: 'Are you sure?' }, class: 'btn destroy-btn' %>
+</div>
