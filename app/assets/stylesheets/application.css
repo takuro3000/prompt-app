@@ -1,15 +1,98 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* prompts.css */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .new-prompt-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .prompt-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .prompt-card,
+  .prompt-content {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .prompt-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .prompt-card p,
+  .prompt-content p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-actions,
+  .action-links {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary,
+  .show-btn {
+    background-color: #4CAF50;
+  }
+  
+  .btn-secondary,
+  .btn-back {
+    background-color: #6c757d;
+    text-decoration: none;
+  }
+  
+  .btn-edit,
+  .edit-btn {
+    background-color: #FFC107;
+  }
+  
+  .btn-delete,
+  .destroy-btn {
+    background-color: #F44336;
+  }
+  

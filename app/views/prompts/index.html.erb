@@ -1,0 +1,18 @@
+<!-- index.html.erb -->
+<h1>Prompts</h1>
+
+<%= link_to 'New Prompt', new_prompt_path, class: 'new-prompt-btn' %>
+
+<div class="prompt-list">
+  <% @prompts.each do |prompt| %>
+    <div class="prompt-card">
+      <h2><%= prompt.title %></h2>
+      <p><%= prompt.text %></p>
+      <div class="action-links">
+        <%= link_to 'Show', prompt_path(prompt), class: 'btn show-btn' %>
+        <%= link_to 'Edit', edit_prompt_path(prompt), class: 'btn edit-btn' %>
+        <%= link_to 'Destroy', prompt_path(prompt), data: { turbo_method: :delete , turbo_confirm: 'Are you sure?' }, class: 'btn destroy-btn' %>
+      </div>
+    </div>
+  <% end %>
+</div>
