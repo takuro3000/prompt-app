@@ -27,6 +27,7 @@ RSpec.describe "Prompts", type: :system do
     before do
       visit new_prompt_path
     end
+
     describe '#new' do
       it "displays a form for text" do
         expect(page).to have_field 'prompt[text]'
@@ -71,17 +72,21 @@ RSpec.describe "Prompts", type: :system do
     before do
       visit prompt_path(prompt)
     end
+
     describe '#show' do
       it "displays content of the prompt" do
         expect(page).to have_content prompt.text
       end
+
       it "displays a link to the editing screen" do
         expect(page).to have_link 'Edit', href: "/prompts/#{prompt.id}/edit"
       end
+
       it "displays a link to back to list screen" do
         expect(page).to have_link 'Back', href: "/prompts"
       end
     end
+
     describe '#destroy' do
       it "decreases the number of prompt" do
         count = Prompt.count
