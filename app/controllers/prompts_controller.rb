@@ -11,6 +11,10 @@ class PromptsController < ApplicationController
     @prompt = Prompt.new
   end
 
+  def edit
+    @prompt = Prompt.find(params[:id])
+  end
+
   def create
     @prompt = Prompt.new(prompt_params)
 
@@ -19,10 +23,6 @@ class PromptsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-  end
-
-  def edit
-    @prompt = Prompt.find(params[:id])
   end
 
   def update
